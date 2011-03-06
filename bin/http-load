@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var load = require('./../lib/http-load');
-var usage = 'Usage: $0 [-n number of requests] [-c concurrency level] [--cachedir <dir>] [-v] [-h] <urlfile>';
+var usage = 'Usage: $0 [-n number of requests] [-c concurrency level] [--cachedir <dir>] [--initcache] [-v] [-h] <urlfile>';
 var argv = require('optimist')
   .usage(usage)
   .default('n', 100)
@@ -11,11 +11,20 @@ var argv = require('optimist')
   .default('h', false)
   .argv;
 
-if (argv.h || argv._.length !== 1) {
-  console.log(usage);
-  console.log(argv);
-  process.exit();
+var assertMsg = function(check, msg) {
+  if (!check) {
+    if (msg) {
+      console.log(msg);
+    }
+    console.log(usage);
+    process.exit();
+  }
 }
+  
+assertMsg(!argv.h);
+assertMsg(argv._.length === 1);
+assertMsg(argv.initcache && argv.cachedir || !argv.initcache, 'initcache option requires cachedir');
+
 var filename = argv._[0] || 'urls.txt';
 
-new load.HttpLoad(filename, argv.n, argv.c, argv.v, argv.h, argv.cachedir).start();
+new load.HttpLoad(filename, argv.n, argv.c, argv.v, argv.h, argv.cachedir, argv.initcache).start();
