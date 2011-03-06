@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var load = require('./../lib/http-load');
+var argv = require('optimist')
+  .usage('Usage: $0 -n [number of requests] -c [concurrency level] [-v] [-h]')
+  .default('n', 100)
+  .default('c', 10)
+  .default('v', false)
+  .default('h', false)
+  .argv;
+
+var filename = argv._[0] || 'urls.txt';
+new load.HttpLoad(filename, argv.n, argv.c, argv.v, argv.h).start();

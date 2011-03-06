@@ -1,0 +1,17 @@
+{
+  "name": "http-load",
+  "description": "Simple load testing tool for HTTP applications",
+  "version": "0.1.0",
+  "author": "Stefan Tilkov <stefan.tilkov@innoq.com>",
+  "repository": {
+      "type": "git",
+      "url": "http://github.com/stilkov/http-load.git" 
+  },
+  "keywords": ["test", "load", "http"],
+  "dependencies": {
+    "optimist": ">= 0.1.6"
+   },
+  "main": "./lib/http-load",
+  "bin": { "http-load": "./bin/http-load" },
+  "engines": { "node": ">= 0.4.1" }
+}
