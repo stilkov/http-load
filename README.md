@@ -18,9 +18,10 @@ The reason for the files in the local directory is that `http-load` performs a h
 
 There are a number of options you can specify:
 
-    -v turn on verbose logging
+    -v                      turn on verbose logging
     -n [number of requests] (defaults to 100)
-    -i (record headers when something other than 200 is returned)
+    --cachedir <directory>  where to store content for comparison
+    -i                      (record headers when something other than 200 is returned)
 
 ## Limitations
 
