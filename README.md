@@ -2,7 +2,7 @@
 
 ## Simple load testing tool for HTTP applications
 
-`http-load` is a very simple load testing tool, mainly developed to try out some Node.js features. It's strongly inspired (i.e. it liberately steals ideas from) [http_load][0] Use at your own risk, and don't expect too much. Patches/pull requests welcome, maybe this might even become useful one day.
+`http-load` is a very simple load testing tool, mainly developed to try out some Node.js features. It's strongly inspired (i.e. it liberately steals ideas from) [http_load][0]. Use at your own risk, and don't expect too much. Patches/pull requests welcome, maybe this might even become useful one day.
 
 ## Installation
 
@@ -58,4 +58,4 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[0] http://acme.com/software/http_load/
+[0]: http://acme.com/software/http_load/
