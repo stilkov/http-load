@@ -28,7 +28,7 @@ Lots:
 
 * It should be possible to specify the number of concurrent connections. I didn't find an obvious way to get around Node's internal Agent default; this is what I'll address next.
 * Only GET request are performed right now.
-* Currently, the requests need to be performed once 'by hand' so that the hash comparison can be performend. I plan to change this so that there's an optional first run performed (using just one request per URI) that 'initializes' the local directory.
+* Currently, the requests need to be performed once 'by hand' so that the hash comparison can be performed. I plan to change this so that there's an optional first run (using just one request per URI) that 'initializes' the local directory.
 * There are absolutely no tests at all, which should give you some indication as to the tool's reliability.
 * Many more; hey, this is the result of a day's hacking in a language and framework I'm far from being an expert in.
 
